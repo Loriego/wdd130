@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stallone Adu Baffour | WDD 130</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="wwr/">Rafting Website</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Stallone Adu Baffour | WDD 130</h1>
+      <img src="images/profile.jpg" alt="Hello, my name is Stallone Adu Baffour" width="200">
+      <p>
+        Hello! My name is Stallone Adu Baffour and I am from Ghana. I enjoy web
+        development, Android development, and exploring new technologies. I am
+        also working on starting a shoe cleaning business called SoleMate
+        Cleaners. I am excited to learn more about web design in this course and
+        apply the skills to my projects.
+      </p>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 | Stallone Adu Baffour | Ghana
+      </p>
+    </footer>
+  </body>
+</html>

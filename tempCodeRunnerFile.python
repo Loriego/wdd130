@@ -1,0 +1,190 @@
+import customtkinter as ctk
+from PIL import Image, ImageTk
+import pygame
+import time
+import os
+from tkinter import filedialog
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+
+# 🎵 Initialize sound
+pygame.mixer.init()
+
+def play_sound():
+    try:
+        pygame.mixer.music.load("cheer.wav")  # cheering sound file
+        pygame.mixer.music.play()
+    except:
+        pass
+
+# 🎨 Background dictionary
+backgrounds = {
+    "forest": "forest.png",
+    "space": "space.png",
+    "beach": "beach.png"
+}
+
+# 🐾 Character dictionary
+characters = {
+    "lion": "lion.png",
+    "dog": "dog.png",
+    "cat": "cat.png"
+}
+
+# App Setup
+ctk.set_appearance_mode("light")
+ctk.set_default_color_theme("blue")
+
+app = ctk.CTk()
+app.title("✨ Interactive Story Builder ✨")
+app.geometry("950x750")
+
+# Background label
+bg_label = ctk.CTkLabel(app, text="")
+bg_label.place(relwidth=1, relheight=1)
+
+# Character label
+char_label = ctk.CTkLabel(app, text="")
+char_label.place(relx=0.75, rely=0.35)
+
+# Track uploaded image
+uploaded_char_image = None
+
+def set_background(place):
+    place = place.lower().strip()
+    file = backgrounds.get(place, "default.png")
+    if os.path.exists(file):
+        img = Image.open(file).resize((950, 750))
+        tk_img = ImageTk.PhotoImage(img)
+        bg_label.configure(image=tk_img)
+        bg_label.image = tk_img
+
+def set_character(animal):
+    global uploaded_char_image
+    if uploaded_char_image:  # if learner uploaded custom image
+        char_label.configure(image=uploaded_char_image)
+        char_label.image = uploaded_char_image
+        return
+
+    animal = animal.lower().strip()
+    file = characters.get(animal, "default_animal.png")
+    if os.path.exists(file):
+        img = Image.open(file).resize((250, 250))
+        tk_img = ImageTk.PhotoImage(img)
+        char_label.configure(image=tk_img)
+        char_label.image = tk_img
+
+# Upload custom character image
+def upload_character():
+    global uploaded_char_image
+    file_path = filedialog.askopenfilename(
+        filetypes=[("Image files", ".png;.jpg;.jpeg;.gif")]
+    )
+    if file_path:
+        img = Image.open(file_path).resize((250, 250))
+        uploaded_char_image = ImageTk.PhotoImage(img)
+        char_label.configure(image=uploaded_char_image)
+        char_label.image = uploaded_char_image
+
+# Title
+title_label = ctk.CTkLabel(app, text="Build Your Own Story", font=("Arial", 26, "bold"), text_color="white")
+title_label.pack(pady=15)
+
+# Input fields
+labels = ["Adjective", "Animal", "Verb 1", "Exclamation", "Verb 2", "Verb 3", "Color", "Place", "Superpower", "Friend's Name"]
+entries = {}
+for lbl in labels:
+    frame = ctk.CTkFrame(app, corner_radius=15)
+    frame.pack(pady=4, padx=10, fill="x")
+    label = ctk.CTkLabel(frame, text=f"{lbl}:", width=120, anchor="w")
+    label.pack(side="left", padx=5)
+    entry = ctk.CTkEntry(frame, width=400, placeholder_text=f"Enter {lbl.lower()} here...")
+    entry.pack(side="left", padx=5)
+    entries[lbl] = entry
+
+# Story Display Box
+output_box = ctk.CTkTextbox(app, width=850, height=200, font=("Arial", 14), wrap="word")
+output_box.pack(pady=20)
+
+# Typing animation
+def type_text(text):
+    output_box.delete("1.0", "end")
+    for char in text:
+        output_box.insert("end", char)
+        output_box.update()
+        time.sleep(0.02)
+
+# Build story
+def build_story():
+    words = {lbl: entry.get() for lbl, entry in entries.items()}
+    story = (
+        f"\nThe other day, I was really in trouble. It all started when I saw a very {words['Adjective']} {words['Animal']}.\n"
+        f"It {words['Verb 1']} down the hallway. \"{words['Exclamation'].capitalize()}!\" I yelled.\n"
+        f"But all I could think to do was to {words['Verb 2']} over and over.\n"
+        f"Miraculously, that caused it to stop, but not before it tried to {words['Verb 3']} "
+        f"right in front of my family.\n"
+        f"Then, my best friend {words['Friend\'s Name']} appeared and used their {words['Superpower']} powers "
+        f"to help save the day.\n"
+        f"In the end, the {words['Color']} {words['Animal']} ran away and disappeared into {words['Place']}.\n"
+    )
+    type_text(story)
+    play_sound()
+    set_background(words['Place'])
+    set_character(words['Animal'])
+    return story
+
+# Save story
+def save_story():
+    story = output_box.get("1.0", "end").strip()
+    if not story:
+        return
+    
+    file_path = filedialog.asksaveasfilename(defaultextension=".pdf",
+                                             filetypes=[("PDF files", ".pdf"), ("Text files", ".txt")])
+    if not file_path:
+        return
+    
+    if file_path.endswith(".txt"):
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(story)
+    else:
+        c = canvas.Canvas(file_path, pagesize=letter)
+        text = c.beginText(50, 750)
+        text.setFont("Times-Roman", 12)
+        for line in story.split("\n"):
+            text.textLine(line)
+        c.drawText(text)
+        c.save()
+
+# Reset
+def reset_story():
+    global uploaded_char_image
+    for entry in entries.values():
+        entry.delete(0, "end")
+    output_box.delete("1.0", "end")
+    uploaded_char_image = None
+    set_background("default")
+    set_character("default_animal")
+
+# Buttons
+button_frame = ctk.CTkFrame(app, corner_radius=15)
+button_frame.pack(pady=10)
+
+build_button = ctk.CTkButton(button_frame, text="✨ Build Story ✨", command=build_story)
+build_button.pack(side="left", padx=10)
+
+reset_button = ctk.CTkButton(button_frame, text="🔄 Reset", fg_color="red", hover_color="darkred", command=reset_story)
+reset_button.pack(side="left", padx=10)
+
+save_button = ctk.CTkButton(button_frame, text="💾 Save My Story", fg_color="green", hover_color="darkgreen", command=save_story)
+save_button.pack(side="left", padx=10)
+
+upload_button = ctk.CTkButton(button_frame, text="📸 Upload Character", fg_color="purple", hover_color="darkviolet", command=upload_character)
+upload_button.pack(side="left", padx=10)
+
+# Default visuals
+set_background("default")
+set_character("default_animal")
+
+# Run App
+app.mainloop()

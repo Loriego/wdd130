@@ -1,89 +1,126 @@
-/* temple.css */
-/* Modern Clean Design for Temple Page */
-
-:root {
-  --primary-color: #1e3a8a; /* deep modern blue */
-  --accent-color: #f59e0b;  /* warm accent (golden) */
-  --bg-color: #f9fafb;      /* light background */
-  --text-color: #111827;    /* dark gray text */
-  --font-main: "Inter", "Segoe UI", Arial, sans-serif;
-}
-
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-color);
+/* General reset */
+* {
   margin: 0;
   padding: 0;
-  color: var(--text-color);
-  line-height: 1.6;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+/* Navigation */
+nav {
+  background-color: #222;
+  padding: 1rem;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
   color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.3s ease;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+.nav-links li a:hover {
+  background: #444;
+  border-radius: 5px;
 }
 
-/* Main */
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px;  /* Change to left:-250px; if you want left-side menu */
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 4rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.show {
+    right: 0;  /* Change to left:0; if you want left-side menu */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Main content */
 main {
-  max-width: 900px;
+  max-width: 800px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  text-align: center;
+  padding: 1rem;
 }
 
-main img {
-  max-width: 100%;
+h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 200px;
   height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
 }
 
-main img:hover {
-  transform: scale(1.02);
+p {
+  padding: 0.5rem 0;
+  color: #555;
+  line-height: 1.5;
 }
 
-main h2 {
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-  color: var(--primary-color);
+/* Aside */
+aside {
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
 }
 
-main p {
-  margin: 1rem 0;
-  font-size: 1rem;
+aside h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+  margin: 0.5rem;
+  border-radius: 5px;
 }
 
 /* Footer */
 footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
   margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0.3rem 0;
-}
-
-footer a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  color: #777;
 }

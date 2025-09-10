@@ -1,9 +1,10 @@
-/* Navigation */
+/* nav */
 nav {
   background-color: #333;
   padding: 1rem;
 }
 
+/* nav a */
 nav a {
   color: white;
   padding: 0.5rem 1rem;
@@ -11,12 +12,12 @@ nav a {
   text-decoration: none;
 }
 
-/* Headings */
+/* h1 */
 h1 {
   color: #2c3e50;
 }
 
-/* Images */
+/* img */
 img {
   width: 100%;
   height: auto;
@@ -25,13 +26,13 @@ img {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Main */
+/* main */
 main {
   max-width: 900px;
   margin: auto;
 }
 
-/* Aside */
+/* aside */
 aside {
   width: 250px;
   margin: 1rem;
@@ -41,17 +42,18 @@ aside {
   color: #333;
 }
 
+/* aside img */
 aside img {
   width: 200px;
   height: auto;
 }
 
-/* Paragraph */
+/* paragraph */
 p {
   padding: 0;
 }
 
-/* Footer */
+/* footer */
 footer {
   margin-top: 2rem;
   border-top: 1px solid #ddd;

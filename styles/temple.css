@@ -1,60 +1,61 @@
-/* Navigation bar */
+/* nav */
 nav {
-  background-color: #34495e;
-  padding: 10px;
+  background-color: #333;
+  padding: 1rem;
 }
 
+/* nav a */
 nav a {
   color: white;
-  padding: 10px;
+  padding: 0.5rem 1rem;
   display: block;
   text-decoration: none;
 }
 
-/* Main section */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
+/* h1 */
 h1 {
   color: #2c3e50;
 }
 
-/* Images */
+/* img */
 img {
-  width: 250px;
+  width: 100%;
   height: auto;
-  border: 2px solid #2c3e50;
+  border: 2px solid #ccc;
   padding: 5px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Aside section */
+/* main */
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* aside */
 aside {
-  width: 80%;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  padding: 15px;
-  background-color: #f4f4f4;
+  width: 250px;
+  margin: 1rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #f8f8f8;
   color: #333;
 }
 
+/* aside img */
 aside img {
   width: 200px;
   height: auto;
 }
 
-/* Paragraphs */
+/* paragraph */
 p {
   padding: 0;
 }
 
-/* Footer */
+/* footer */
 footer {
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
   text-align: center;
-  padding: 10px;
 }

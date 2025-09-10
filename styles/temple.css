@@ -1,0 +1,60 @@
+/* Navigation bar */
+nav {
+  background-color: #34495e;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Main section */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+/* Images */
+img {
+  width: 250px;
+  height: auto;
+  border: 2px solid #2c3e50;
+  padding: 5px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Aside section */
+aside {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+/* Paragraphs */
+p {
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}

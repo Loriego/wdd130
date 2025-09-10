@@ -1,7 +1,29 @@
+/* temple.css */
+/* Modern Clean Styling for WDD 130 Temple Page */
+
+:root {
+  --primary-color: #1e3a8a;
+  --accent-color: #3b82f6;
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --font-main: "Segoe UI", Arial, sans-serif;
+}
+
+/* General Reset */
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
 /* Navigation */
 nav {
-  background-color: #1e3a8a;
+  background-color: var(--primary-color);
   padding: 1rem;
+  text-align: center;
 }
 
 nav a {
@@ -9,51 +31,62 @@ nav a {
   padding: 0.5rem 1rem;
   display: inline-block;
   text-decoration: none;
+  font-weight: 500;
 }
 
 nav a:hover {
-  background-color: #3b82f6;
+  background-color: var(--accent-color);
   border-radius: 4px;
 }
 
-/* Heading */
-h1 {
-  color: #1e3a8a;
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* Images */
-img {
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+main img {
   width: 200px;
   height: auto;
   border: 2px solid #ddd;
   padding: 5px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Main */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1rem;
+  border-radius: 8px;
 }
 
 /* Aside */
 aside {
-  width: 300px;
+  width: 320px;
   margin: 2rem auto;
   border: 1px solid #ddd;
   padding: 1rem;
-  background-color: #f9fafb;
-  color: #111;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+aside h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 aside img {
   width: 200px;
   height: auto;
   margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* Paragraphs */
+/* Paragraph */
 p {
   padding: 0;
 }
@@ -64,4 +97,6 @@ footer {
   border-top: 1px solid #ddd;
   text-align: center;
   padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
 }

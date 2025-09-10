@@ -1,0 +1,89 @@
+/* temple.css */
+/* Modern Clean Design for Temple Page */
+
+:root {
+  --primary-color: #1e3a8a; /* deep modern blue */
+  --accent-color: #f59e0b;  /* warm accent (golden) */
+  --bg-color: #f9fafb;      /* light background */
+  --text-color: #111827;    /* dark gray text */
+  --font-main: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+main img:hover {
+  transform: scale(1.02);
+}
+
+main h2 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  color: var(--primary-color);
+}
+
+main p {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

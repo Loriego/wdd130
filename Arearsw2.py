@@ -85,7 +85,7 @@ def calculate_areas():
 
     print("\n✅ All calculations complete! 🚀")
 
-
+m
 # Fun goodbye messages
 goodbyes = [
     "👋 Thanks for using the Shape Area Calculator. Keep squaring your goals!",

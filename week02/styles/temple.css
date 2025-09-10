@@ -1,126 +1,67 @@
-/* General reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 /* Navigation */
 nav {
-  background-color: #222;
+  background-color: #1e3a8a;
   padding: 1rem;
-  position: relative;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links li a {
+nav a {
   color: white;
-  text-decoration: none;
   padding: 0.5rem 1rem;
-  display: block;
-  transition: background 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.nav-links li a:hover {
-  background: #444;
-  border-radius: 5px;
+nav a:hover {
+  background-color: #3b82f6;
+  border-radius: 4px;
 }
 
-/* Mobile menu toggle */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* Responsive nav */
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -250px;  /* Change to left:-250px; if you want left-side menu */
-    width: 250px;
-    height: 100%;
-    background-color: #222;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 4rem;
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-  }
-
-  .nav-links.show {
-    right: 0;  /* Change to left:0; if you want left-side menu */
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* Main content */
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  text-align: center;
-  padding: 1rem;
-}
-
+/* Heading */
 h1 {
-  color: #333;
-  margin-bottom: 1rem;
+  color: #1e3a8a;
 }
 
+/* Images */
 img {
   width: 200px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-p {
-  padding: 0.5rem 0;
-  color: #555;
-  line-height: 1.5;
+/* Main */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /* Aside */
 aside {
-  width: 80%;
-  max-width: 600px;
+  width: 300px;
   margin: 2rem auto;
-  padding: 1rem;
-  background-color: #f4f4f4;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  text-align: center;
-}
-
-aside h2 {
-  margin-bottom: 1rem;
-  color: #222;
+  padding: 1rem;
+  background-color: #f9fafb;
+  color: #111;
 }
 
 aside img {
   width: 200px;
   height: auto;
-  margin: 0.5rem;
-  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+p {
+  padding: 0;
 }
 
 /* Footer */
 footer {
   margin-top: 2rem;
   border-top: 1px solid #ddd;
-  padding: 1rem;
   text-align: center;
-  color: #777;
+  padding: 1rem;
 }

@@ -1,0 +1,70 @@
+/* nav */
+nav {
+  background-color: #222; /* darker for better contrast */
+  padding: 1rem;
+}
+
+/* nav a */
+nav a {
+  color: #ffffff; /* white text for strong contrast */
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #444; /* hover state still accessible */
+}
+
+/* h1 */
+h1 {
+  color: #1a1a1a; /* almost black for max readability */
+}
+
+/* img */
+img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #666; /* slightly darker border for contrast */
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+}
+
+/* main */
+main {
+  max-width: 840px;
+  margin: 0 auto; /* centers content */
+}
+
+/* aside */
+aside {
+  width: 250px;
+  margin: 1rem;
+  border: 1px solid #bbb; /* darker for visibility */
+  padding: 1rem;
+  background-color: #f4f4f4; /* slightly darker gray */
+  color: #222; /* text nearly black */
+}
+
+/* aside img */
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+/* paragraph */
+p {
+  padding: 0;
+  color: #222; /* ensure text contrast */
+  line-height: 1.5; /* improves readability */
+}
+
+/* footer */
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #bbb;
+  text-align: center;
+  color: #444; /* readable on white bg */
+  background-color: #fafafa; /* subtle contrast */
+  padding: 1rem;
+}

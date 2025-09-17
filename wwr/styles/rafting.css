@@ -1,0 +1,232 @@
+/* ============================
+   Rafting site styles (rafting.css)
+   Place this file at: wwr/styles/rafting.css
+   ============================ */
+
+/* CSS variables (color scheme + fonts) */
+:root{
+  --body-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --heading-font: "Georgia", "Times New Roman", serif;
+
+  --primary-color: #0b6e4f;    /* headings / accent */
+  --accent1-color: #163a3a;    /* body text (used for text) */
+  --accent2-color: #ff6b35;    /* highlight / hero overlay */
+  --muted-color: #6b7a78;
+
+  --max-width: 840px;
+}
+
+/* Reset box model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body{
+  font-family: var(--body-font);
+  color: var(--accent1-color);               /* per assignment */
+  background-color: #f5f7f6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+/* Page width limiter (header, main, footer centered) */
+header, main, footer {
+  width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Basic spacing for nav, p, section, article (as requested) */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Header layout: logo + nav */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Logo */
+.logo img {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+
+/* Main navigation (right side) */
+.mainnav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mainnav a{
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.mainnav a:hover{
+  background: rgba(11,110,79,0.08);
+}
+
+/* ========== HERO ========== */
+.hero{
+  position: relative;        /* so overlays can be absolute */
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 16px 16px 16px;
+}
+
+/* Hero image fills the hero container */
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Title overlay (absolute) */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.95;
+  background-color: var(--accent2-color);
+  color: #fff;
+  margin: 0;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+/* Article overlay positioned over hero image */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Image inside hero article - floating to the right, specific width */
+.hero article .article-img {
+  float: right;
+  width: 125px;           /* required example size */
+  height: auto;
+  margin-left: 12px;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Clear float behavior if needed */
+.hero article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* History & Adventure sections */
+.history, .adventure {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+/* Footer */
+footer {
+  margin-top: 24px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Social media nav inside footer */
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.socialmedia a {
+  text-decoration: none;       /* remove underline (assignment) */
+  display: inline-block;
+}
+
+.socialmedia img {
+  width: 28px;
+  height: auto;
+  display: block;
+  filter: none;
+}
+
+/* Small screens adjustments */
+@media (max-width: 767px) {
+
+  header, main, footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .mainnav {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+    padding: 12px;
+  }
+
+  .hero article {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  nav, p, section, article {
+    margin: 12px;
+    padding: 6px;
+  }
+}
+
+/* Desktop / larger screen layout polish */
+@media (min-width: 768px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  /* Slightly larger hero title on wide screens */
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

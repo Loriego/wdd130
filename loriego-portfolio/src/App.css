@@ -1,42 +1,62 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #111, #222);
+  color: #fff;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-content {
+  max-width: 50%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.hero-content h1 span {
+  color: #00c3ff;
 }
 
-.card {
-  padding: 2em;
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ddd;
 }
 
-.read-the-docs {
-  color: #888;
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  background: #00c3ff;
+  color: #111;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #00c3ff;
+  border: 1px solid #00c3ff;
+}
+
+.hero-image img {
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 195, 255, 0.3);
 }

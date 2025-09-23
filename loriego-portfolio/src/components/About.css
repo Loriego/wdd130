@@ -1,20 +1,18 @@
 /* About.css */
 .about {
-  padding: 4rem 2rem;
-  background: #f9f9f9;
-  color: #111;
-  text-align: center;
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .about h2 {
-  font-size: 2rem;
+  color: #00bfff;
   margin-bottom: 1rem;
-  color: #00c3ff;
 }
 
 .about p {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   font-size: 1.1rem;
-  line-height: 1.6;
 }

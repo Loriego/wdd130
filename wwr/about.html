@@ -1,87 +1,115 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WWR Adventures — About Us</title>
-
-  <!-- Meta -->
-  <meta name="description" content="WWR Adventures — white water rafting trips, experienced guides, family-friendly fun. Learn our story and mission on this About page.">
-  <meta name="author" content="Stallone Adu Baffour">
-
-  <!-- Local CSS for the rafting site -->
-  <link rel="stylesheet" href="styles/rafting.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>White Water Rafting | About Us</title>
+  <meta name="description" content="Learn about our rafting company's history, guides, and adventures." />
+  <link rel="stylesheet" href="styles/rafting.css" />
 </head>
-
 <body>
+  <!-- Header (GRID) -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="White Water Rafting logo" class="logo" />
+      <span class="brand-text">White Water Rafting</span>
+    </a>
 
-  <!-- Header: logo + site navigation -->
-  <header>
-    <div class="logo">
-      <!-- Replace logo.png with your chosen logo; keep file in wwr/images -->
-      <img src="images/logo.png" alt="WWR Adventures logo">
-    </div>
-
-    <nav class="mainnav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
+    <!-- Nav (FLEX) -->
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html" aria-current="page">About</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Main content (hero + article + sections) -->
-  <main>
-
-    <!-- HERO with background image (img fills the div) -->
-    <div class="hero" role="region" aria-label="Hero">
-      <!-- hero image (large enough to cover horizontal space; place in wwr/images/hero.jpg) -->
-      <img class="hero-img" src="images/hero.png" alt="Group rafting down whitewater rapids">
-
-      <!-- Title overlay -->
-      <h1>WWR Adventures</h1>
-
-      <!-- Article overlay on the hero -->
-      <article>
-        <!-- small portrait (happy client / staff). Place in wwr/images/staff.jpg -->
-        <img src="images/staff.jpg" alt="Happy rafting guide assisting guests" class="article-img">
-        <p>
-          WWR Adventures brings thrills and safe, high-energy white water experiences to paddlers of every skill level.
-          Our guides are certified, our equipment is rigorously maintained, and our mission is to create lifelong memories
-          while respecting the river and local environment.
-        </p>
-      </article>
-    </div>
-
-    <!-- History section -->
-    <section class="history">
-      <h2>History</h2>
-      <p>
-        Founded in 2009 by a group of river guides and outdoor enthusiasts, WWR Adventures started as a local community
-        rafting outfit and quickly grew into a regional operator. Over the years we've expanded our routes, improved
-        safety training, and partnered with local communities to protect river corridors.
-      </p>
+  <!-- Main -->
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" role="img" aria-label="Rafting team paddling through a scenic canyon">
+      <div class="hero-inner">
+        <h1>About Us</h1>
+        <p>Since 1998, we’ve helped thousands discover the thrill of white water.</p>
+      </div>
     </section>
 
-    <!-- Adventure section (empty for now per assignment) -->
-    <section class="adventure">
-      <h2>Adventure Awaits You!</h2>
-      <p><!-- Content / images will be added in the next assignment. --></p>
+    <!-- History -->
+    <section class="history section">
+      <h2>Our History</h2>
+      <div class="history-grid">
+        <div class="history-text">
+          <p>
+            What started as a two-raft outfit on a quiet river bend has grown into a
+            professional guide company known for safety, scenery, and smiles. Over the
+            years, we’ve built a team of certified guides and a fleet designed for all
+            skill levels—from first-timers to adrenaline pros.
+          </p>
+          <p>
+            Our commitment is simple: unmatched river experiences backed by training,
+            top-tier equipment, and a love for the outdoors.
+          </p>
+        </div>
+        <figure class="history-media">
+          <img src="images/history.jpg" alt="Vintage photo of the first rafting trip" />
+          <figcaption>First commercial run (1998) — the beginning of our journey.</figcaption>
+        </figure>
+      </div>
     </section>
 
+    <!-- Adventure (Cards) -->
+    <section class="adventure section">
+      <h2>Choose Your Adventure</h2>
+      <div class="adventure-grid">
+        <article class="card">
+          <img src="images/adventure1.jpg" alt="Family rafting on calm waters" />
+          <div class="card-body">
+            <h3>Family Float</h3>
+            <p>Gentle currents, big views—perfect for first timers and families.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/adventure2.jpg" alt="Intermediate rapids splashing over the raft" />
+          <div class="card-body">
+            <h3>Classic Rapids</h3>
+            <p>A balanced run with playful Class II–III waves and plenty of splash.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/adventure3.jpg" alt="Advanced raft cutting through a narrow chute" />
+          <div class="card-body">
+            <h3>Expert Run</h3>
+            <p>Technical lines and fast water for seasoned paddlers. Guide approval required.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Callout / CTA -->
+    <section class="cta">
+      <h2>Ready to paddle?</h2>
+      <p>Check availability and plan your next river day.</p>
+      <a class="btn" href="trips.html">Explore Trips</a>
+    </section>
   </main>
 
-  <!-- Footer: copyright + social icons -->
-  <footer>
-    <p>© 2025 WWR Adventures — Stallone Adu Baffour</p>
-
-    <nav class="socialmedia" aria-label="Social media">
-      <!-- Replace these icons in wwr/images with real image files (icons <= ~100KB if possible) -->
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook icon"></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram icon"></a>
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="images/icon-twitter.png" alt="Twitter icon"></a>
-    </nav>
+  <!-- Footer (right-aligned social icons, horizontal) -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> White Water Rafting • All rights reserved</p>
+    <ul class="social" aria-label="Social media">
+      <li><a href="#" aria-label="Follow on Facebook"><img src="images/facebook.svg" alt="" /></a></li>
+      <li><a href="#" aria-label="Follow on Instagram"><img src="images/instagram.svg" alt="" /></a></li>
+      <li><a href="#" aria-label="Follow on Twitter"><img src="images/twitter.svg" alt="" /></a></li>
+    </ul>
   </footer>
 
+  <script>
+    // Small enhancement for year (no inline styles used)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

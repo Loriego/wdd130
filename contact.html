@@ -15,7 +15,7 @@
       <img src="images/logo.png" alt="WWR Adventures logo" class="logo">
       <span class="brand-text">White Water Rafting</span>
     </a>
-    <!-- Nav -->
+    <!-- Navigation -->
     <nav class="main-nav" aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -28,46 +28,40 @@
 
   <!-- Main -->
   <main>
-    <!-- Hero -->
-    <section class="hero">
-      <h1>Contact Us</h1>
-      <p>We’d love to hear from you! Reach out with questions or to plan your next adventure.</p>
-    </section>
-
-    <!-- Company Info -->
+    <!-- Contact Info + Map -->
     <section class="contact-info">
-      <h2>Our Office</h2>
-      <p><strong>Address:</strong> 123 River Bend Road, Rapids City, RC 45678</p>
-      <p><strong>Phone:</strong> (123) 456-7890</p>
-      <p><strong>Email:</strong> info@wwradventures.com</p>
-      <!-- Google Map -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.218632587609!2d-122.41941508468239!3d37.77492977975985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b4a7a5d%3A0xb1d1f9c1f9d1a9e7!2sRiver%20Rafting!5e0!3m2!1sen!2sus!4v1615161615161"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
+      <div>
+        <h2>Contact Information</h2>
+        <p>📍 123 River Bend Road, Adventure Town</p>
+        <p>📞 +233 24 744 0127</p>
+        <p>✉️ info@wwradventures.com</p>
+      </div>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9559233153167!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5777d1c676a4c0!2sAdventure%20Park!5e0!3m2!1sen!2sgh!4v1695917512345"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
     </section>
 
     <!-- Contact Form -->
     <section class="contact-form">
       <h2>Send Us a Message</h2>
-      <form action="#" method="post">
-        <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required>
+      <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email Address:</label>
+        <label for="email">Your Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <fieldset>
-          <legend>Purpose of Message</legend>
-          <label for="general"><input type="radio" id="general" name="purpose" value="general" required> General Inquiry</label>
-          <label for="booking"><input type="radio" id="booking" name="purpose" value="booking"> Trip Booking</label>
-          <label for="support"><input type="radio" id="support" name="purpose" value="support"> Support</label>
-        </fieldset>
+        <label for="purpose">Purpose of Message:</label>
+        <select id="purpose" name="purpose" required>
+          <option value="" disabled selected>Choose one...</option>
+          <option value="general">General Inquiry</option>
+          <option value="booking">Trip Booking</option>
+          <option value="support">Support</option>
+        </select>
 
         <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
         <label>
           <input type="checkbox" name="newsletter"> Subscribe to our newsletter
@@ -108,7 +102,7 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

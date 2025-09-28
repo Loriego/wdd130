@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>White Water Rafting | About Us</title>
+  <meta name="description" content="Learn about our rafting company's history, guides, and adventures.">
+  <meta name="author" content="Stallone Adu Baffour">
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+  <!-- Header (Grid Layout) -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="WWR Adventures logo" class="logo">
+      <span class="brand-text">White Water Rafting</span>
+    </a>
+    <!-- Nav (Flex Layout) -->
+    <nav class="main-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html" aria-current="page">About</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <figure>
+        <img src="images/hero.webp" alt="Group rafting down whitewater rapids">
+        <figcaption>Our guests taking on the rapids</figcaption>
+      </figure>
+      <div class="hero-inner">
+        <h1>About Us</h1>
+        <p>Since 1998, we’ve helped thousands discover the thrill of white water.</p>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history section">
+      <h2>Our History</h2>
+      <div class="history-grid">
+        <figure>
+          <img src="images/history1.webp" alt="Vintage rafting trip with guests and guides">
+          <figcaption>Our first rafting season, 1998</figcaption>
+        </figure>
+        <figure>
+          <img src="images/history2.webp" alt="Rafting base camp with boats and gear">
+          <figcaption>Base camp and gear setup</figcaption>
+        </figure>
+        <p>
+          What started as a two-raft outfit on a quiet river bend has grown into a
+          professional guide company known for safety, scenery, and smiles. Over the
+          years, we’ve built a team of certified guides and a fleet designed for all
+          skill levels—from first-timers to adrenaline pros.
+        </p>
+      </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="staff section">
+      <h2>Meet Our Guides</h2>
+      <figure>
+        <img src="images/staff1.webp" alt="Happy rafting guide assisting guests">
+        <figcaption>Our guides ensure safety and smiles</figcaption>
+      </figure>
+    </section>
+
+    <!-- Adventures Section -->
+    <section class="adventure section">
+      <h2>Choose Your Adventure</h2>
+      <div class="adventure-grid">
+        <figure>
+          <img src="images/adventure1.webp" alt="Family rafting on calm waters">
+          <figcaption>Family Float – gentle waters for everyone</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure2.webp" alt="Raft splashing through mid-level rapids">
+          <figcaption>Classic Rapids – splashy fun for all</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure3.webp" alt="Expert rafting through a canyon">
+          <figcaption>Expert Run – for adrenaline seekers</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section">
+      <h2>Adventure Gallery</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="images/gallery1.webp" alt="Group celebrating after rafting">
+          <figcaption>Celebrating after the run</figcaption>
+        </figure>
+        <figure>
+          <img src="images/gallery2.webp" alt="Raft moving through scenic canyon">
+          <figcaption>Breathtaking canyon scenery</figcaption>
+        </figure>
+        <figure>
+          <img src="images/gallery3.webp" alt="Rafting gear lined on the shore">
+          <figcaption>Gear ready for the trip</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <h2>Ready to paddle?</h2>
+      <p>Check availability and plan your next river day.</p>
+      <a class="btn" href="trips.html">Explore Trips</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> White Water Rafting • All rights reserved</p>
+    <ul class="social" aria-label="Social media">
+      <li><a href="#"><img src="images/icon-facebook.png" alt="Facebook icon"></a></li>
+      <li><a href="#"><img src="images/icon-instagram.png" alt="Instagram icon"></a></li>
+      <li><a href="#"><img src="images/icon-twitter.png" alt="Twitter icon"></a></li>
+    </ul>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

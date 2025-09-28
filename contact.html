@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Water Rafting | Contact Us</title>
+  <meta name="description" content="Get in touch with White Water Rafting for trips, support, and general inquiries. Contact us today!">
+  <meta name="author" content="Stallone Adu Baffour">
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="WWR Adventures logo" class="logo">
+      <span class="brand-text">White Water Rafting</span>
+    </a>
+    <!-- Nav -->
+    <nav class="main-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Reach out with questions or to plan your next adventure.</p>
+    </section>
+
+    <!-- Company Info -->
+    <section class="contact-info">
+      <h2>Our Office</h2>
+      <p><strong>Address:</strong> 123 River Bend Road, Rapids City, RC 45678</p>
+      <p><strong>Phone:</strong> (123) 456-7890</p>
+      <p><strong>Email:</strong> info@wwradventures.com</p>
+      <!-- Embedded Google Map -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.218632587609!2d-122.41941508468239!3d37.77492977975985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b4a7a5d%3A0xb1d1f9c1f9d1a9e7!2sRiver%20Rafting!5e0!3m2!1sen!2sus!4v1615161615161"
+        width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </section>
+
+    <!-- Form -->
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="purpose">Purpose of Message:</label>
+        <select id="purpose" name="purpose" required>
+          <option value="" disabled selected>Choose One ...</option>
+          <option value="trips">Trip Information</option>
+          <option value="support">Customer Support</option>
+          <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <label>
+          <input type="checkbox" name="newsletter"> Subscribe to our newsletter
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="staff">
+      <h2>Meet Our Team</h2>
+      <div class="staff-grid">
+        <figure>
+          <img src="images/staff1.webp" alt="Guide John helping guests on the river">
+          <figcaption>John – Senior Rafting Guide</figcaption>
+        </figure>
+        <figure>
+          <img src="images/staff2.webp" alt="Guide Maria leading a group down rapids">
+          <figcaption>Maria – Safety Specialist</figcaption>
+        </figure>
+        <figure>
+          <img src="images/staff3.webp" alt="Guide David instructing paddlers">
+          <figcaption>David – Trip Coordinator</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> White Water Rafting • All rights reserved</p>
+    <ul class="social" aria-label="Social media">
+      <li><a href="#"><img src="images/icon-facebook.png" alt="Facebook icon"></a></li>
+      <li><a href="#"><img src="images/icon-instagram.png" alt="Instagram icon"></a></li>
+      <li><a href="#"><img src="images/icon-twitter.png" alt="Twitter icon"></a></li>
+    </ul>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

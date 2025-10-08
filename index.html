@@ -3,59 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exciting Expeditions - Rafting Adventures</title>
+  <title>Exciting Expeditions | Rafting Adventures</title>
   <link rel="stylesheet" href="rafting.css">
 </head>
 <body>
-  <!-- HEADER -->
+  <!-- Header -->
   <header>
-    <img src="images/logo.png" alt="Exciting Expeditions Logo" class="logo">
+    <div class="logo">
+      <img src="images/logo.png" alt="Exciting Expeditions Logo">
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Adventure Starts Here</h1>
-    <button>Explore Trips</button>
+    <p>Experience thrilling rafting expeditions like no other.</p>
+    <button onclick="location.href='trips.html'">Explore Trips</button>
   </section>
 
-  <!-- NEWSLETTER FORM -->
+  <!-- Newsletter -->
   <section class="newsletter">
     <h2>Join Our Newsletter</h2>
     <form>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
       <button type="submit">Sign Up Now</button>
     </form>
   </section>
 
-  <!-- WHY CHOOSE US -->
+  <!-- Why Choose Us -->
   <section class="choose-us">
     <h2>Why Choose Us?</h2>
-    <div class="reasons">
-      <div>
-        <img src="images/rafting1.jpg" alt="Rafting fun group">
-        <p>Rafting in fun groups</p>
-      </div>
-      <div>
-        <img src="images/rafting2.jpg" alt="Rafting on a river">
-        <p>Rafting on scenic rivers</p>
-      </div>
+    <div class="gallery">
+      <figure>
+        <img src="images/rafting1.jpg" alt="Rafting adventure">
+        <figcaption>Rafting in fun groups</figcaption>
+      </figure>
+      <figure>
+        <img src="images/rafting2.jpg" alt="Team rafting">
+        <figcaption>Team challenges</figcaption>
+      </figure>
+      <figure>
+        <img src="images/rafting3.jpg" alt="Scenic river ride">
+        <figcaption>Scenic river rides</figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Exciting Expeditions. All rights reserved.</p>
+    <p>&copy; 2025 Exciting Expeditions | Designed by Loriego</p>
   </footer>
 </body>
 </html>

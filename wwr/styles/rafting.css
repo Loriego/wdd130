@@ -1,4 +1,4 @@
-/* Global Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +8,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #fff;
+  background: #fff;
   color: #333;
-}
-
-/* Main container */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem;
 }
 
 /* Header */
@@ -24,226 +17,144 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0077cc;
+  background: #0066cc;
   padding: 1rem 2rem;
 }
 
-header img.logo {
+header .logo img {
   height: 50px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
 }
 
 nav a {
   color: white;
+  margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover,
-nav .active {
-  text-decoration: underline;
+nav a:hover {
+  color: #ffcc00;
 }
 
 /* Hero */
 .hero {
-  background: url("images/rafting-hero.jpg") no-repeat center center/cover;
-  height: 400px;
+  background: url('images/raftinghero.jpg') no-repeat center center/cover;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .hero h1 {
   font-size: 3rem;
-  font-weight: bold;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero button {
-  background-color: #f4a261;
+  background: #ff6600;
   border: none;
   padding: 12px 24px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s;
 }
 
 .hero button:hover {
-  background-color: #e76f51;
-  color: white;
+  background: #cc5200;
 }
 
 /* Newsletter */
 .newsletter {
-  background: #f9f9f9;
-  padding: 2rem;
   text-align: center;
+  padding: 3rem 1rem;
+  background: #f9f9f9;
+}
+
+.newsletter h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  background: white;
+  padding: 1.5rem;
   border-radius: 10px;
-  margin: 2rem auto;
-  width: 60%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.newsletter form {
-  display: grid;
-  gap: 10px;
-  max-width: 400px;
-  margin: auto;
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: left;
 }
 
-.newsletter input[type="text"],
-.newsletter input[type="email"] {
-  padding: 0.5rem;
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.newsletter button {
-  padding: 0.75rem;
-  background: #0077cc;
+form button {
+  background: #0066cc;
   color: white;
   border: none;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  width: 100%;
+  transition: 0.3s;
 }
 
-.newsletter button:hover {
-  background: #005fa3;
+form button:hover {
+  background: #004080;
 }
 
-/* Grid Content */
-.grid-content .grid {
+/* Gallery Section */
+.choose-us {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  margin: 2rem 0;
-}
-.grid-content img {
-  width: 100%;
-  border-radius: 8px;
+  margin-top: 2rem;
 }
 
-/* Trips Page */
-.trip-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-.trip-list img {
+.gallery img {
   width: 100%;
   border-radius: 8px;
-}
-.trip-table {
-  margin: 2rem 0;
-}
-.trip-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.trip-table th, 
-.trip-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-  background: #fafafa;
-}
-.trip-table th {
-  background: #0077cc;
-  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* About Page */
-.history {
-  margin: 2rem 0;
-}
-.guides .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  text-align: center;
-}
-.guides img {
-  width: 100%;
-  border-radius: 50%;
-}
-.guides figcaption {
+.gallery figcaption {
   margin-top: 0.5rem;
   font-style: italic;
-  font-size: 0.9rem;
-}
-
-/* Contact Page */
-.contact-info {
-  margin: 2rem 0;
-}
-.contact-form {
-  background: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-.contact-form label {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-.contact-form input,
-.contact-form textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.contact-form button {
-  margin-top: 1rem;
-  padding: 0.75rem;
-  background: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.contact-form button:hover {
-  background: #005fa3;
+  color: #555;
 }
 
 /* Footer */
 footer {
-  background: #0077cc;
+  background: #0066cc;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .newsletter {
-    width: 90%;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
 }
